@@ -1,0 +1,13 @@
+<div class="animate__animated animate__fadeIn">
+    <h2>Todos los Paises</h2>
+    <hr>
+    
+  </div>
+  <hr>
+  
+  <div *ngIf="paises.length > 0" class="row">
+    <div class="col">
+      <app-pais-tabla [data]="paises"></app-pais-tabla>
+    </div>
+  </div>
+  

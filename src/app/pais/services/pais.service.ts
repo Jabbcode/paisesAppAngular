@@ -20,6 +20,11 @@ export class PaisService {
 
   constructor(private http: HttpClient) {}
 
+  Paises(): Observable<Country[]> {
+    const url = `${this.apiUrl}/all`;
+    return this.http.get<Country[]>(url, { params: this.httpParams });
+  }
+
   buscarPais(pais: string): Observable<Country[]> {
     const url = `${this.apiUrl}/name/${pais}`;
     return this.http.get<Country[]>(url, { params: this.httpParams });
